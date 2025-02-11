@@ -162,7 +162,7 @@ kafka-console-producer --broker-list localhost:9092 --topic notification-events
   "userLoginTime": null
 }
 ```
-![Email Template](/images/emailverification.jpeg)
+![Email Template](https://github.com/Fayupable/KafkaMailSenderMicroservices/blob/main/services/notification/images/emailverification.jpeg)
 
 
 ```markdown
@@ -179,7 +179,7 @@ kafka-console-producer --broker-list localhost:9092 --topic notification-events
 }
 ```
 
-![Email Template](/images/userlogin.jpeg)
+![Email Template](https://github.com/Fayupable/KafkaMailSenderMicroservices/blob/main/services/notification/images/userlogin.jpeg)
 
 
 
