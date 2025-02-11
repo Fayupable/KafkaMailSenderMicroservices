@@ -1,0 +1,50 @@
+server:
+  port: 8040
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/notification
+    username: fayupable
+    password: fayupable
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: user-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+        spring.json.value.default.type: com.fayupable.mailsender.kafka.user.UserConfirmation
+        spring.json.type.mapping: userConfirmation:com.fayupable.mailsender.kafka.user.UserConfirmation
+  mail:
+    host: localhost
+    port: 1025
+    username: fayupable
+    password: fayupable
+    properties:
+      mail:
+        smtp:
+          trust: "*"
+        auth: true
+        starttls:
+          enabled: true
+        connectiontimeout: 5000
+        timeout: 3000
+        writetimeout: 5000
+
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: ${SUPPORT_EMAIL}
+#    password: ${APP_PASSWORD}
+#    properties:
+#      mail.smtp.auth: true
+#      mail.smtp.starttls.enable: true

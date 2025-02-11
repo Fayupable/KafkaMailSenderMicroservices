@@ -1,0 +1,14 @@
+package com.fayupable.mailsender.response;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class JwtResponse {
+    private String id;
+    private String token;
+
+}

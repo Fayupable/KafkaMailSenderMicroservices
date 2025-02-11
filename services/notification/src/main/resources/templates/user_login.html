@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Notification</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .content {
+            padding: 20px 0;
+        }
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+        }
+        .login-time {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff;
+            margin: 15px 0;
+        }
+        .footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Login Notification</h1>
+    </div>
+    <div class="content">
+        <p>Hello,</p>
+        <p>Your account was accessed on:</p>
+        <div class="login-time">
+            <strong th:text="${userLoginTime}"></strong>
+        </div>
+        <p>If this was you, you can ignore this email.</p>
+        <p>If you did not log in, please change your password immediately and check your account security settings.</p>
+    </div>
+    <div class="footer">
+        <p>This is an automated email, please do not reply.</p>
+    </div>
+</div>
+</body>
+</html>
