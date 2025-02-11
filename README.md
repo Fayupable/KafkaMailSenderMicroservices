@@ -1,4 +1,4 @@
-# JavaMailSender with Microservices
+# KafkaMailSenderMicroservices
 
 ## Overview
 **MailTestWithMicroservices** is a microservices-based project designed to test email sending functionality using **Kafka** and **Spring Boot**. The project follows **Domain-Driven Design (DDD)** and **Event-Driven Design** principles to ensure a scalable and maintainable architecture. It utilizes event-driven communication to handle email notifications efficiently.
@@ -102,6 +102,8 @@ docker exec -it kafka kafka-console-consumer.sh --bootstrap-server kafka:9092 --
 ## Contributions
 Feel free to fork and contribute to this project! Create a pull request if you find any issues or want to add features.
 
-## License
-This project is licensed under the **MIT License**.
+## Credits
 
+The architecture diagram used in this project is **modified from an original design** by [Ali Bouali - Microservices Full Code](https://github.com/ali-bouali/microservices-full-code/blob/main/diagrams/micro-services.drawio). 
+
+The modifications include **structural adjustments and enhancements** to better align with the **KafkaMailSenderMicroservices** architecture.
